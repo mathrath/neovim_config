@@ -63,6 +63,7 @@ Plug 'https://github.com/rking/ag.vim.git'
 Plug 'https://github.com/AndrewRadev/linediff.vim.git'
 Plug 'https://github.com/terryma/vim-multiple-cursors.git'
 Plug 'https://github.com/moll/vim-node.git'
+Plug 'https://github.com/flazz/vim-colorschemes.git'
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
@@ -72,3 +73,4 @@ autocmd! BufWritePost * Neomake
 let g:neomake_javascript_enabled_makers = ['eslint']
 "let g:neomake_open_list = 2
 
+colorscheme badwolf
