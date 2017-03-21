@@ -3,9 +3,6 @@ set number "show line numbers on the side
 set ai
 set si
 set ic  "ignore case for searched
-set tabstop=4
-set shiftwidth=4
-set noexpandtab
 syntax on
 set background=dark
 set hls  "highlight search matches. disable temporarily with :noh
@@ -64,6 +61,7 @@ Plug 'https://github.com/AndrewRadev/linediff.vim.git'
 Plug 'https://github.com/terryma/vim-multiple-cursors.git'
 Plug 'https://github.com/moll/vim-node.git'
 Plug 'https://github.com/flazz/vim-colorschemes.git'
+Plug 'https://github.com/keith/swift.vim.git'
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
@@ -74,3 +72,21 @@ let g:neomake_javascript_enabled_makers = ['eslint']
 "let g:neomake_open_list = 2
 
 colorscheme badwolf
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+"show bad indentation
+set list
+set listchars=tab:!-,trail:-
+
+let g:badwolf_tabline = 3
+colorscheme badwolf
+
+"show substitutions
+set inccommand=nosplit
+
+"show a guide line at 100 characters
+set colorcolumn=100
+
+au VimEnter * if !&diff | tab all | tabfirst | endif
